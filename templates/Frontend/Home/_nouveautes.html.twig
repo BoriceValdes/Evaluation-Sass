@@ -1,0 +1,17 @@
+<section class="nouveautes">
+  <h2>Nouveautés</h2>
+  {# {{ dump(products) }} #}
+  <div class="nouveautes__grid">
+    {% for product in products %}        
+      <div class="product-card">
+      {% set mainImage = product|main_image %}
+        <img src="/images/products/{{ mainImage.imageName }}" alt="{{ mainImage.imageName }}">
+          <h3>{{ product.name }}</h3>
+          {% set cheapestVariant = product|resolve_chepeast_variant %}
+          {% set priceTTC = priceTTC(cheapestVariant) %}
+          <p>À partir de {{ priceTTC }} € </p>
+          <span>{{ mainImage.product.model.name}}</span>
+      </div>
+    {% endfor %}
+
+</section>

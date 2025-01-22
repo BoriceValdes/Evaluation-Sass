@@ -1,0 +1,14 @@
+// Styles pour les boutons
+.button {
+  padding: 0.5rem 1rem;
+  background-color: $accent-color;
+  color: $secondary-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}

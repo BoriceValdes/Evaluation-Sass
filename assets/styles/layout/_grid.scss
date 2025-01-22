@@ -1,0 +1,14 @@
+// Styles de mise en page en grille
+.grid {
+  @include grid-columns(4, 1rem);
+
+  &--brands {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  &--products {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

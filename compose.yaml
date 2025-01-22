@@ -1,0 +1,31 @@
+services:
+    database:
+        build:
+            context: .
+            dockerfile: ./Dockerfile-database
+        ports:
+            - "3307:3307"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: wethenew_dev
+        volumes:
+            - ./dbsave.sql:/docker-entrypoint-initdb.d/dbsave.sql:ro
+        networks:
+            - wethenew
+
+    web:
+        build:
+            context: .
+            dockerfile: ./Dockerfile-web
+        volumes:
+            - .:/var/www/html:rw
+        ports:
+            - "8000:80"
+        depends_on:
+            - database
+        networks:
+            - wethenew
+
+networks:
+    wethenew:
+        driver: bridge

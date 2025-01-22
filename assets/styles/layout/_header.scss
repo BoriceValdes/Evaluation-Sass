@@ -1,0 +1,58 @@
+// Styles pour l'en-tête
+.header {
+  background-color: $secondary-color;
+  &__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  padding: 1rem;
+  margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+
+  &__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    li a {
+      text-decoration: none;
+      color: $text-secondary;
+    }
+  }
+
+  &__search {
+    @include flex-center;
+    gap: 0.5rem;
+    width: 30%;
+    position: relative;
+    input {
+      padding: 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    button {
+      position: absolute;
+      right: 10px;
+      background: transparent;
+      border: none;
+      margin-left: 20px;
+    }
+  }
+  &__actions{
+
+    button {
+      background: transparent;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<section class="categories">
+    <ul>
+    {% for model in models %}        
+        <li>
+        <img src="/images/models/{{ model.imageName }}" alt="{{ model.name }}">
+        <p>{{ model.name }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+</section>

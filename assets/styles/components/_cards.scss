@@ -1,0 +1,21 @@
+// Styles pour les cartes (produits ou marques)
+.product-card, .brand-card {
+  text-align: center;
+  img {
+    width: 100%;
+    padding: 0;
+    background: $secondary-color;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    margin: -7px;
+
+  }
+
+  h3, p {
+    background: transparent;
+  }
+  h3{
+    margin: 0.5rem 0;
+  }
+  
+}
